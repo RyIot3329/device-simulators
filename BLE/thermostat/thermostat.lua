@@ -40,8 +40,6 @@ ratemp = ble.createCharacteristic ("deadbeef-0000-1000-0000-008cafebabe5")
 spacetempalarm = ble.createCharacteristic ("deadbeef-0000-1000-0000-008cafebabe6")
 coolingspt = ble.createCharacteristic ("deadbeef-0000-1000-0000-008cafebabe8")
 heatingspt = ble.createCharacteristic ("deadbeef-0000-1000-0000-008cafebabe9")
-
-
 static = ble.createCharacteristic ("deadbeef-0000-1000-0000-008cafebabe7")
 
 fanstatus_desc = ble.createDescriptor ("12345678-1234-5678-1234-56789abcdef1")
@@ -52,7 +50,6 @@ ratemp_desc = ble.createDescriptor ("12345678-1234-5678-1234-56789abcdef5")
 spacetempalarm_desc = ble.createDescriptor ("12345678-1234-5678-1234-56789abcdef6")
 coolingspt_desc = ble.createDescriptor ("12345678-1234-5678-1234-56789abcdef7")
 heatingspt_desc = ble.createDescriptor ("12345678-1234-5678-1234-56789abcdef8")
-
 static_desc = ble.createDescriptor ("12345678-1234-5678-1234-56789abcdef7")
 
 dev1:addService (service)
@@ -95,6 +92,7 @@ heatingspt:notifying(true)
 static:setValue({0xde,0xad,0xbe,0xef}, DataType.UINT8)
 
 fanstatus_val = 0
+fanstatus:setValue(fanstatus_val, DataType.UINT32)
 
 --update the nodes values every 1 second
 function Update()
