@@ -38,6 +38,10 @@ spacehumidity = ble.createCharacteristic ("deadbeef-0000-1000-0000-008cafebabe3"
 co2 = ble.createCharacteristic ("deadbeef-0000-1000-0000-008cafebabe4")
 ratemp = ble.createCharacteristic ("deadbeef-0000-1000-0000-008cafebabe5")
 spacetempalarm = ble.createCharacteristic ("deadbeef-0000-1000-0000-008cafebabe6")
+coolingspt = ble.createCharacteristic ("deadbeef-0000-1000-0000-008cafebabe8")
+heatingspt = ble.createCharacteristic ("deadbeef-0000-1000-0000-008cafebabe9")
+
+
 static = ble.createCharacteristic ("deadbeef-0000-1000-0000-008cafebabe7")
 
 fanstatus_desc = ble.createDescriptor ("12345678-1234-5678-1234-56789abcdef1")
@@ -46,6 +50,9 @@ spacehumidity_desc = ble.createDescriptor ("12345678-1234-5678-1234-56789abcdef3
 co2_desc = ble.createDescriptor ("12345678-1234-5678-1234-56789abcdef4")
 ratemp_desc = ble.createDescriptor ("12345678-1234-5678-1234-56789abcdef5")
 spacetempalarm_desc = ble.createDescriptor ("12345678-1234-5678-1234-56789abcdef6")
+coolingspt_desc = ble.createDescriptor ("12345678-1234-5678-1234-56789abcdef7")
+heatingspt_desc = ble.createDescriptor ("12345678-1234-5678-1234-56789abcdef8")
+
 static_desc = ble.createDescriptor ("12345678-1234-5678-1234-56789abcdef7")
 
 dev1:addService (service)
@@ -56,6 +63,9 @@ service:addCharacteristic (spacehumidity)
 service:addCharacteristic (co2)
 service:addCharacteristic (ratemp)
 service:addCharacteristic (spacetempalarm)
+service:addCharacteristic (coolingspt)
+service:addCharacteristic (heatingspt)
+service:addCharacteristic (spacetempalarm)
 service:addCharacteristic (static)
 
 fanstatus:addDescriptor (fanstatus_desc)
@@ -64,6 +74,8 @@ spacehumidity:addDescriptor (spacehumidity_desc)
 co2:addDescriptor (co2_desc)
 ratemp:addDescriptor (ratemp_desc)
 spacetempalarm:addDescriptor (spacetempalarm_desc)
+coolingspt:addDescriptor (coolingspt_desc)
+heatingspt:addDescriptor (heatingspt_desc)
 static:addDescriptor (static_desc)
 
 ble.registerDevice (dev1)
@@ -77,6 +89,8 @@ spacehumidity:notifying(true)
 co2:notifying(true)
 ratemp:notifying(true)
 spacetempalarm:notifying(true)
+coolingspt:notifying(true)
+heatingspt:notifying(true)
 
 static:setValue({0xde,0xad,0xbe,0xef}, DataType.UINT8)
 
@@ -90,7 +104,7 @@ function Update()
     t = t + 5
 
     --fanstatus
-    fanstatus_val = fanstatus_val + 1
+    fanstatus_val = 1
     fanstatus:setValue(fanstatus_val, DataType.UINT32)
     --spacetemp
     local spacetemp_val = round(math.spacetemp(-20000,20000) / 10000, 8)
@@ -107,4 +121,10 @@ function Update()
     --spacetempalarm
     local spacetempalarm_val = round(2 * math.abs((t-math.pi/2) % (2*math.pi) * 1/math.pi - 1) - 1, 8)
     spacetempalarm:setValue(spacetempalarm_val, DataType.DOUBLE)
+    --coolingspt
+    local coolingspt_val = 72
+    coolingspt:setValue(coolingspt, DataType.UINT16)
+    --heatingspt
+    local heatingspt_val = 68
+    heatingspt:setValue(heatingspt, DataType.UINT16)
 end
