@@ -1,17 +1,19 @@
 {
   "server_list": {
-    "comm": "tcp",
-    "host": "0.0.0.0",
-    "port": 5020,
-    "ignore_missing_slaves": false,
-    "framer": "socket",
-    "identity": {
-      "VendorName": "IOTech",
-      "ProductCode": "MB",
-      "VendorUrl": "https://github.com/riptideio/pymodbus/",
-      "ProductName": "IOTech Server",
-      "ModelName": "IOTech Server",
-      "MajorMinorRevision": "3.1.0"
+    "server": {
+      "comm": "tcp",
+      "host": "0.0.0.0",
+      "port": 5020,
+      "ignore_missing_slaves": false,
+      "framer": "socket",
+      "identity": {
+        "VendorName": "IOTech",
+        "ProductCode": "MB",
+        "VendorUrl": "https://github.com/riptideio/pymodbus/",
+        "ProductName": "IOTech Server",
+        "ModelName": "IOTech Server",
+        "MajorMinorRevision": "3.1.0"
+      }
     }
   },
   "device_list": {
@@ -33,9 +35,9 @@
           },
           "action": {
             "bits": null,
-            "uint16": null,
-            "uint32": null,
-            "float32": null,
+            "uint16": "increment",
+            "uint32": "increment",
+            "float32": "increment",
             "string": null
           }
         }
@@ -45,13 +47,13 @@
       "bits": [],
       "uint16": [
         {
-          "addr": 3,
+          "addr": 5,
           "value": 0,
           "action": "random",
           "kwargs": { "minval": 0, "maxval": 1 }
         },
         {
-          "addr": 4,
+          "addr": 6,
           "value": 0,
           "action": "random",
           "kwargs": { "minval": 0, "maxval": 1 }
@@ -73,40 +75,40 @@
       ],
       "float32": [
         {
-          "addr": 7,
-          "value": 72,
+          "addr": 5,
+          "value": 72.0,
           "action": "random",
-          "kwargs": { "minval": 65, "maxval": 78 }
+          "kwargs": { "minval": 65.0, "maxval": 78.0 }
+        },
+        {
+          "addr": 6,
+          "value": 75.0,
+          "action": "random",
+          "kwargs": { "minval": 65.0, "maxval": 78.0 }
+        },
+        {
+          "addr": 7,
+          "value": 0.0,
+          "action": "random",
+          "kwargs": { "minval": 0.0, "maxval": 200.0 }
         },
         {
           "addr": 8,
-          "value": 75,
+          "value": 50.0,
           "action": "random",
-          "kwargs": { "minval": 65, "maxval": 78 }
+          "kwargs": { "minval": 65.0, "maxval": 65.0 }
         },
         {
           "addr": 9,
-          "value": 0,
-          "action": "random",
-          "kwargs": { "minval": 0, "maxval": 200 }
+          "value": 72.0
         },
         {
           "addr": 10,
-          "value": 50,
-          "action": "random",
-          "kwargs": { "minval": 65, "maxval": 65 }
+          "value": 68.0
         },
         {
           "addr": 11,
-          "value": 72
-        },
-        {
-          "addr": 12,
-          "value": 68
-        },
-        {
-          "addr": 12,
-          "value": 50
+          "value": 50.0
         }
       ],
       "string": [],
