@@ -47,25 +47,25 @@
       "bits": [{ "addr": 2, "value": 7 }],
       "uint16": [
         {
+          "addr": 3,
+          "value": 0,
+          "action": "random",
+          "kwargs": { "minval": 0, "maxval": 1 }
+        },
+        {
+          "addr": 4,
+          "value": 0,
+          "action": "random",
+          "kwargs": { "minval": 0, "maxval": 1 }
+        },
+        {
           "addr": 5,
-          "value": 0,
-          "action": "random",
-          "kwargs": { "minval": 0, "maxval": 1 }
-        },
-        {
-          "addr": 6,
-          "value": 0,
-          "action": "random",
-          "kwargs": { "minval": 0, "maxval": 1 }
-        },
-        {
-          "addr": 7,
           "value": 1,
           "action": "random",
           "kwargs": { "minval": 0, "maxval": 4 }
         },
         {
-          "addr": 8,
+          "addr": 6,
           "value": 0,
           "action": "random",
           "kwargs": { "minval": 0, "maxval": 1 }
@@ -74,39 +74,39 @@
       "uint32": [],
       "float32": [
         {
-          "addr": [9, 10],
+          "addr": [7, 8],
           "value": 72.0,
           "action": "random",
           "kwargs": { "minval": 65.0, "maxval": 78.0 }
         },
         {
-          "addr": [11, 12],
+          "addr": [9, 10],
           "value": 75.0,
           "action": "random",
           "kwargs": { "minval": 65.0, "maxval": 78.0 }
         },
         {
-          "addr": [13, 14],
+          "addr": [11, 12],
           "value": 0.0,
           "action": "random",
           "kwargs": { "minval": 0.0, "maxval": 200.0 }
         },
         {
-          "addr": [15, 16],
+          "addr": [13, 14],
           "value": 50.0,
           "action": "random",
           "kwargs": { "minval": 65.0, "maxval": 65.0 }
         },
         {
-          "addr": [17, 18],
+          "addr": [15, 16],
           "value": 72.0
         },
         {
-          "addr": [19, 20],
+          "addr": [17, 18],
           "value": 68.0
         },
         {
-          "addr": [21, 20],
+          "addr": [19, 20],
           "value": 50.0
         }
       ],
