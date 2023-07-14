@@ -44,7 +44,7 @@
       },
       "invalid": [1],
       "write": [5],
-      "bits": [],
+      "bits": [{ "addr": 2, "value": 7 }],
       "uint16": [
         {
           "addr": 5,
@@ -57,57 +57,56 @@
           "value": 0,
           "action": "random",
           "kwargs": { "minval": 0, "maxval": 1 }
-        }
-      ],
-      "uint32": [
+        },
         {
-          "addr": 5,
+          "addr": 7,
           "value": 1,
           "action": "random",
           "kwargs": { "minval": 0, "maxval": 4 }
         },
         {
-          "addr": 6,
+          "addr": 8,
           "value": 0,
           "action": "random",
           "kwargs": { "minval": 0, "maxval": 1 }
         }
       ],
+      "uint32": [],
       "float32": [
         {
-          "addr": 5,
+          "addr": [9, 10],
           "value": 72.0,
           "action": "random",
           "kwargs": { "minval": 65.0, "maxval": 78.0 }
         },
         {
-          "addr": 6,
+          "addr": [11, 12],
           "value": 75.0,
           "action": "random",
           "kwargs": { "minval": 65.0, "maxval": 78.0 }
         },
         {
-          "addr": 7,
+          "addr": [13, 14],
           "value": 0.0,
           "action": "random",
           "kwargs": { "minval": 0.0, "maxval": 200.0 }
         },
         {
-          "addr": 8,
+          "addr": [15, 16],
           "value": 50.0,
           "action": "random",
           "kwargs": { "minval": 65.0, "maxval": 65.0 }
         },
         {
-          "addr": 9,
+          "addr": [17, 18],
           "value": 72.0
         },
         {
-          "addr": 10,
+          "addr": [19, 20],
           "value": 68.0
         },
         {
-          "addr": 11,
+          "addr": [21, 20],
           "value": 50.0
         }
       ],
