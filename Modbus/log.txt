@@ -1,0 +1,19 @@
+2023-07-17 17:56:45,318 INFO  logging:96 Start simulator
+2023-07-17 17:56:45,542 INFO  logging:96 Modbus server started
+Executing <Task pending name='Task-1' coro=<run_main() running at /usr/local/lib/python3.9/dist-packages/pymodbus/server/simulator/main.py:116> wait_for=<_GatheringFuture pending cb=[<TaskWakeupMethWrapper object at 0x7f5c4c548970>()] created at /usr/lib/python3.9/asyncio/tasks.py:704> cb=[_run_until_complete_cb() at /usr/lib/python3.9/asyncio/base_events.py:184] created at /usr/lib/python3.9/asyncio/base_events.py:621> took 0.226 seconds
+2023-07-17 17:56:45,543 INFO  logging:96 HTTP server started
+2023-07-17 17:56:45,544 INFO  logging:96 Server(TCP) listening.
+2023-07-17 17:56:51,482 DEBUG logging:102 Socket [('149.28.252.27', 5020)] opened
+2023-07-17 17:56:51,482 DEBUG logging:102 TCP client connection established [('216.128.135.159', 37454)]
+2023-07-17 17:56:51,483 DEBUG logging:102 Handling data: 0x0 0x1 0x0 0x0 0x0 0x6 0x1 0x3 0x0 0x3 0x0 0x1
+2023-07-17 17:56:51,483 DEBUG logging:102 Processing: 0x0 0x1 0x0 0x0 0x0 0x6 0x1 0x3 0x0 0x3 0x0 0x1
+2023-07-17 17:56:51,483 DEBUG logging:102 Factory Request[ReadHoldingRegistersRequest': 3]
+2023-07-17 17:56:51,483 DEBUG logging:102 send: [ReadHoldingRegistersResponse (1)]- b'000100000005010302e983'
+2023-07-17 17:56:57,395 DEBUG logging:102 Handling data: 0x0 0x2 0x0 0x0 0x0 0x6 0x1 0x3 0x0 0x2 0x0 0x1
+2023-07-17 17:56:57,395 DEBUG logging:102 Processing: 0x0 0x2 0x0 0x0 0x0 0x6 0x1 0x3 0x0 0x2 0x0 0x1
+2023-07-17 17:56:57,395 DEBUG logging:102 Factory Request[ReadHoldingRegistersRequest': 3]
+2023-07-17 17:56:57,395 DEBUG logging:102 send: [ReadHoldingRegistersResponse (1)]- b'0002000000050103020007'
+2023-07-17 17:57:00,699 DEBUG logging:102 Handling data: 0x0 0x3 0x0 0x0 0x0 0x6 0x1 0x3 0x0 0x3 0x0 0x1
+2023-07-17 17:57:00,699 DEBUG logging:102 Processing: 0x0 0x3 0x0 0x0 0x0 0x6 0x1 0x3 0x0 0x3 0x0 0x1
+2023-07-17 17:57:00,700 DEBUG logging:102 Factory Request[ReadHoldingRegistersRequest': 3]
+2023-07-17 17:57:00,700 DEBUG logging:102 send: [ReadHoldingRegistersResponse (1)]- b'0003000000050103022093'
